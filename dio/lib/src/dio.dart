@@ -914,7 +914,7 @@ abstract class DioMixin implements Dio {
   }
 
   // Initiate Http requests
-  Future<Response<T>> _dispatchRequest<T>(RequestOptions options) async {
+  FutureOr _dispatchRequest<T>(RequestOptions options) async {
     var cancelToken = options.cancelToken;
     ResponseBody responseBody;
     try {
